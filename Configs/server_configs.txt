@@ -1,0 +1,68 @@
+# Server-99 Configuration Notes
+
+# 1. Static IP Configuration (Desktop -> IP Configuration)
+# The server must be static as it provides critical network services (DNS/DHCP).
+
+Interface: FastEthernet0/0
+IPv4 Address: 192.168.99.100
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.99.1
+DNS Server: 192.168.99.100 (Self-Reference)
+
+IPv6 Address: 2001:DB8:ACAD:99::100
+Prefix Length: 64
+Default Gateway: 2001:DB8:ACAD:99::1
+DNS Server: 2001:DB8:ACAD:99::100 (Self-Reference)
+
+# --------------------------------------------------------
+
+# 2. DNS Service Configuration (Services -> DNS)
+# Status: ON
+
+Record Name: projectserver.com
+Record Type: A Record (IPv4)
+Address: 192.168.99.100
+
+# --------------------------------------------------------
+
+# 3. HTTP Service Configuration (Services -> HTTP)
+# Status: ON
+# index.html modified for custom welcoming message.
+
+# --------------------------------------------------------
+
+# 4. DHCP Service Configuration (Services -> DHCP)
+# Status: ON
+# DHCP Helper must be configured on R1 (192.168.99.100) to reach this service.
+
+# Pool 1: STAFF (VLAN 10)
+Pool Name: STAFF-POOL
+Default Gateway: 192.168.10.1
+DNS Server: 192.168.99.100
+Start IP Address: 192.168.10.10
+Subnet Mask: 255.255.255.0
+
+# Pool 2: STUDENTS (VLAN 20)
+Pool Name: STUDENT-POOL
+Default Gateway: 192.168.20.1
+DNS Server: 192.168.99.100
+Start IP Address: 192.168.20.10
+Subnet Mask: 255.255.255.0
+
+# --------------------------------------------------------
+
+# 5. DHCPv6 Service Configuration (Services -> DHCPv6)
+# Status: ON
+# R1 must have 'ipv6 nd other-config-flag' to request DNS info from this server.
+
+# Pool 1: STAFF (VLAN 10)
+Pool Name: STAFF-POOL
+DNS Server: 2001:DB8:ACAD:99::100
+Domain Name: projectserver.com
+IPv6 Prefix: 2001:DB8:ACAD:10::/64
+
+# Pool 2: STUDENTS (VLAN 20)
+Pool Name: STUDENT-POOL
+DNS Server: 2001:DB8:ACAD:99::100
+Domain Name: projectserver.com
+IPv6 Prefix: 2001:DB8:ACAD:20::/64
