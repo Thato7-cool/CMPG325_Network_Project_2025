@@ -30,11 +30,22 @@ The project includes preliminary designs for the following foundational topologi
 
 | Topology | Packet Tracer File | Verification Screenshot |
 | :---: | :---: | :--- |
-| **Bus** | [Bus.pkt](Topologies/Bus.pkt) | [Bus Ping Test Image](Ping_Test/bus_ping_test.jpg) |
-| **Star** | [Star.pkt](Topologies/Star.pkt) | [Star Ping Test Image](Ping_Test/star_ping_test.jpg) |
-| **Ring** | [Ring.pkt](Topologies/Ring.pkt) | [Ring Ping Test Image](Ping_Test/ring_ping_test.jpg) |
-| **Mesh** | [Mesh.pkt](Topologies/Mesh.pkt) | [Mesh Ping Test Image](Ping_Test/mesh_ping_test1.jpg) |
-| **Extended Star**| [ExtendedStar.pkt](Topologies/ExtendedStar.pkt) | [Extended Ping Test Image](Ping_Test/extended_star_ping_test.jpg) |
+| **Bus** | [Bus.pkt](Topologies/Bus.pkt) | [Bus Ping Test Image](PingTest/bus_ping_test.jpg) |
+| **Star** | [Star.pkt](Topologies/Star.pkt) | [Star Ping Test Image](PingTest/star_ping_test.jpg)<br>[Star Ping Test Image](PingTest/star_ping_test1.jpg) |
+| **Ring** | [Ring.pkt](Topologies/Ring.pkt) | [Ring Ping Test Image](PingTest/ring_ping_test.jpg) |
+| **Mesh** | [Mesh.pkt](Topologies/Mesh.pkt) | [Mesh Ping Test Image](PingTest/mesh_ping_test.jpg)<br>[Mesh Ping Test Image](PingTest/mesh_ping_test1.jpg) |
+| **Extended Star**| [ExtendedStar.pkt](Topologies/ExtendedStar.pkt) | [Extended Ping Test Image](PingTest/extended_star_ping_test.jpg) |
+
+### IPv4 Verification for Foundational Topologies
+
+The following screenshots verify successful IPv4 configuration (either static or DHCP) for all five foundational network structures developed in Phase 1
+| Bus Topology | Star Topology | Ring Topology |
+| :---: | :---: | :---: |
+| ![Bus IPv4 Test](IP-TABLES/bus_topology_iptable.jpg) | ![Star IPv4 Test](IP-TABLES/star_topology_iptable.jpg) | ![Ring IPv4 Test](IP-TABLES/ring_topology_iptable.jpg) |
+
+| Mesh Topology | Extended Star Topology |
+| :---: | :---: |
+| ![Mesh IPv4 Test](IP-TABLES/mesh_topology_iptable.jpg) | ![Extended Star IPv4 Test](IP-TABLES/extended_star_topology_iptable.jpg) |
 
 ### 2. Final Hybrid Network Segmentation (VLANs)
 
