@@ -65,8 +65,8 @@ The hybrid network is logically segmented into three VLANs with R1 acting as the
 
 All static and dynamic IP assignments for the final Hybrid Topology are documented below.
 
-* [View Detailed IP Address Table (CSV)](IP_Tables/IP_TABLES.csv)
-* **Working File:** [Hybrid_Topology.pkt](Topologies/Hybrid_Topology.pkt)
+* [View Detailed IP Address Table (CSV)](IP-TABLES/hybrid_topology_iptable.csv)
+* **Working File:** [Hybrid_Topology.pkt](Topologies/Hybrid1.pkt)
 
 ### 2. Core Device Configurations
 
@@ -74,11 +74,11 @@ The following configuration files prove the critical implementations, including 
 
 | Device | Key Protocols Proven | Configuration File |
 | :---: | :--- | :--- |
-| **Router R1** | Router-on-a-Stick, DHCP Helper, IPv6 | [R1\_config.txt](Configs/R1_config.txt) |
-| **Switch S1** | Trunking, VLAN 10/99 Access | [S1\_config.txt](Configs/S1_config.txt) |
-| **Switch S2** | Trunking, VLAN 20 Access | [S2\_config.txt](Configs/S2_config.txt) |
-| **Switch S3** | Trunking, VLAN 10 Access | [S3\_config.txt](Configs/S3_config.txt) |
-| **Server 99** | DNS, DHCP, DHCPv6, HTTP Service | [SERVER\_99\_config\_notes.txt](Configs/SERVER_99_config_notes.txt) |
+| **Router R1** | Router-on-a-Stick, DHCP Helper, IPv6 | [r1_configs.txt](Configs/r1_configs.txt) |
+| **Switch S1** | Trunking, VLAN 10/99 Access | [s1_configs.txt](Configs/s1_configs.txt) |
+| **Switch S2** | Trunking, VLAN 20 Access | [s2_configs.txt](Configs/s2_configs.txt) |
+| **Switch S3** | Trunking, VLAN 10 Access | [s3_configs.txt](Configs/s3_configs.txt) |
+| **Server 99** | DNS, DHCP, DHCPv6, HTTP Service | [server_configs.txt](Configs/server_configs.txt) |
 
 ---
 
@@ -87,7 +87,7 @@ The following configuration files prove the critical implementations, including 
 All required verification tests were successful, confirming end-to-end functionality across all layers.
 
 ### 1. Final Topology View
-![Final Hybrid Topology Map with all connections active](Screenshots/Hybrid_Topology_View.png)
+![Final Hybrid Topology Map with all connections active](Screenshots/hybrid_topology.jpg)
 
 ### 2. DNS and Routing Verification
 
@@ -96,7 +96,7 @@ All required verification tests were successful, confirming end-to-end functiona
 * **Purpose:** Confirms successful DHCP relay, DNS resolution, and Inter-VLAN routing across R1.
 * **Result:** **0% Loss** observed.
 
-![Successful ping test to projectserver.com showing 0% loss](Screenshots/ping_test_success.png)
+![Successful ping test to projectserver.com showing 0% loss](PingTest/projectserver.jpg)
 
 ### 3. Application Layer Verification (HTTP Service)
 
@@ -105,4 +105,4 @@ All required verification tests were successful, confirming end-to-end functiona
 * **Purpose:** Confirms Layer 7 service reachability.
 * **Result:** The custom welcome page loaded successfully.
 
-![Web browser displaying the custom 'Ayoba!' welcome page from Server-99](Screenshots/web_browser_test.png)
+![Web browser displaying the custom 'Ayoba!' welcome page from Server-99](Screenshots/project_server.jpg)
