@@ -66,7 +66,7 @@ The hybrid network is logically segmented into three VLANs with R1 acting as the
 All static and dynamic IP assignments for the final Hybrid Topology are documented below.
 
 * [View Detailed IP Address Table (CSV)](IP-TABLES/hybrid_topology_iptable.csv)
-* **Working File:** [Hybrid_Topology.pkt](Topologies/Hybrid1.pkt)
+* **Working File:** [Hybrid_Topology](Topologies/Hybrid1.pkt)
 
 ### 2. Core Device Configurations
 
