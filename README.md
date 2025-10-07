@@ -30,11 +30,11 @@ The project includes preliminary designs for the following foundational topologi
 
 | Topology | Packet Tracer File | Verification Screenshot |
 | :---: | :---: | :--- |
-| **Bus** | [Bus.pkt](Topologies/Bus.pkt) 
-| **Star** | [Star.pkt](Topologies/Star.pkt) | [Star Configuration Image](Screenshots/Star_Configuration.png) |
-| **Ring** | [Ring.pkt](Topologies/Ring.pkt) | [Ring Configuration Image](Screenshots/Ring_Configuration.png) |
-| **Mesh** | [Mesh.pkt](Topologies/Mesh.pkt) | [Mesh Ping Test Image](Screenshots/Mesh_PingTest.png) |
-| **Extended Star**| [ExtendedStar.pkt](Topologies/ExtendedStar.pkt) | [Extended Star Image](Screenshots/ExtendedStar_View.png) |
+| **Bus** | [Bus.pkt](Topologies/Bus.pkt) | [Bus Ping Test Image](Ping_Test/bus_ping_test.jpg) |
+| **Star** | [Star.pkt](Topologies/Star.pkt) | [Star Ping Test Image](Ping_Test/star_ping_test.jpg) |
+| **Ring** | [Ring.pkt](Topologies/Ring.pkt) | [Ring Ping Test Image](Ping_Test/ring_ping_test.jpg) |
+| **Mesh** | [Mesh.pkt](Topologies/Mesh.pkt) | [Mesh Ping Test Image](Ping_Test/mesh_ping_test1.jpg) |
+| **Extended Star**| [ExtendedStar.pkt](Topologies/ExtendedStar.pkt) | [Extended Ping Test Image](Ping_Test/extended_star_ping_test.jpg) |
 
 ### 2. Final Hybrid Network Segmentation (VLANs)
 
