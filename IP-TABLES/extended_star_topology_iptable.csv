@@ -1,0 +1,5 @@
+Device,,Interface,IPv4 Address,Subnet mask
+Laptop-EXT1,,NIC,192.168.10.2/24,255.255.255.0
+Laptop-EXT2,,NIC,192.168.10.3/24,255.255.255.0
+Laptop-EXT3,,NIC,192.168.10.1/24,255.255.255.0
+,,,,
