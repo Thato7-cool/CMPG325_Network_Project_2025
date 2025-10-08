@@ -107,7 +107,6 @@ All required verification tests were successful, confirming end-to-end functiona
 
 ![Web browser displaying the custom 'Ayoba!' welcome page from Server-99](Screenshots/project_server.jpg)
 
---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## II. Individual Network Feature Configuration 
 
