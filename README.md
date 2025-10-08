@@ -41,11 +41,11 @@ The project includes preliminary designs for the following foundational topologi
 The following screenshots verify successful IPv4 configuration (either static or DHCP) for all five foundational network structures developed in Phase 1
 | Bus Topology | Star Topology | Ring Topology |
 | :---: | :---: | :---: |
-| ![Bus IPv4 Test](IP-TABLES/bus_topology_iptable.jpg) | ![Star IPv4 Test](IP-TABLES/star_topology_iptable.jpg) | ![Ring IPv4 Test](IP-TABLES/ring_topology_iptable.jpg) |
+| ![Bus IPv4 Test](IP-TABLES/bus_topology_iptable.csv) | ![Star IPv4 Test](IP-TABLES/star_topology_iptable.csv) | ![Ring IPv4 Test](IP-TABLES/ring_topology_iptable.csv) |
 
 | Mesh Topology | Extended Star Topology |
 | :---: | :---: |
-| ![Mesh IPv4 Test](IP-TABLES/mesh_topology_iptable.jpg) | ![Extended Star IPv4 Test](IP-TABLES/extended_star_topology_iptable.jpg) |
+| ![Mesh IPv4 Test](IP-TABLES/mesh_topology_iptable.csv) | ![Extended Star IPv4 Test](IP-TABLES/extended_star_topology_iptable.csv) |
 
 ### 2. Final Hybrid Network Segmentation (VLANs)
 
