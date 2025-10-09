@@ -109,31 +109,31 @@ All required verification tests were successful, confirming end-to-end functiona
 
 ## II. Individual Network Feature Configuration
 
-**Feature Implemented:** **Static Routes** to enable communication between non-directly connected network topologies (**Bus**, **Ring**, and **Extebnded Star**).
-
----
+**Feature Implemented:** Static Routes to enable communication between different network topologies (Bus, Ring, and Extended-Star).
 
 ### 1. Correct Configuration & Functionality
+| Router | Destination Network | Next-Hop IP | Command Used |
+| :--- | :--- | :--- | :--- |
+| **R1-BUS** | 192.168.20.0 (Ring) | **10.0.0.2** | `ip route 192.168.20.0 255.255.255.0 10.0.0.2` |
+| **R1-BUS** | 192.168.30.0 (Mesh) | **10.0.0.2** | `ip route 192.168.30.0 255.255.255.0 10.0.0.2` |
+| **R2-RING** | 192.168.10.0 (Bus) | **10.0.0.1** | `ip route 192.168.10.0 255.255.255.0 10.0.0.1` |
 
-Static routes were manually configured on the edge routers (R1-BUS and R2-RING) to explicitly define paths for traffic to traverse the point-to-point link ($\mathbf{10.0.0.0/30}$).
-
-| Router | Destination Network (ID) | Subnet Mask | Next-Hop IP | Command Used |
-| :--- | :--- | :--- | :--- | :--- |
-| **R1-BUS** | 192.168.20.0 (Bus) | 255.255.255.0 | **10.0.0.2** | `ip route 192.168.20.0 255.255.255.0 10.0.0.2` |
-| **R1-BUS** | 192.168.30.0 (Star) | 255.255.255.0 | **10.0.0.2** | `ip route 192.168.30.0 255.255.255.0 10.0.0.2` |
-| **R2-RING** | 192.168.10.0 (Extended Star) | 255.255.255.0 | **10.0.0.1** | `ip route 192.168.10.0 255.255.255.0 10.0.0.1` |
-
----
-
+### 2. Documentation in README.md
 
 #### A. Static Route Verification (Routing Table Output)
+The **S** flags confirm the static routes.
 
-The following output from the `show ip route` command confirms that the static routes (marked with **S**) were successfully installed and are active in the routing tables.
+**R1-BUS Routing Table Evidence:**
+![R1-BUS Static Routes Verification](Configs/static_route.png)
 
-**R1-BUS Routing Table Excerpt (Evidence):**
-```bash
-R1-BUS#show ip route
-[Insert R1's connected routes for context]
-S   192.168.20.0/24 [1/0] via 10.0.0.2
-S   192.168.30.0/24 [1/0] via 10.0.0.2
-[Hybrid_Topology](Topologies/Hybrid1.pkt)
+**R2-RING Routing Table Evidence:**
+![R2-RING Static Routes Verification](Configs/r2_static_route.png)
+
+#### B. Cross-Network Functionality Evidence
+* **Test:** Ping from PC-1A (192.168.10.2, Bus LAN) to PC-3A (192.168.30.2,Extended-Star LAN).
+* **Result:** SUCCESSFUL (0% loss)
+* **Evidence:** [Screenshot/(PingTest/ping_test.png]
+*  **Working File:** [Static_route](Topologies/static_route.pkt)
+
+
+---
