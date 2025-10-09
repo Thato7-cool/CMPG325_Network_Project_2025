@@ -106,3 +106,34 @@ All required verification tests were successful, confirming end-to-end functiona
 * **Result:** The custom welcome page loaded successfully.
 
 ![Web browser displaying the custom 'Ayoba!' welcome page from Server-99](Screenshots/project_server.jpg)
+
+## II. Individual Network Feature Configuration
+
+**Feature Implemented:** **Static Routes** to enable communication between non-directly connected network topologies (**Bus**, **Ring**, and **Extebnded Star**).
+
+---
+
+### 1. Correct Configuration & Functionality
+
+Static routes were manually configured on the edge routers (R1-BUS and R2-RING) to explicitly define paths for traffic to traverse the point-to-point link ($\mathbf{10.0.0.0/30}$).
+
+| Router | Destination Network (ID) | Subnet Mask | Next-Hop IP | Command Used |
+| :--- | :--- | :--- | :--- | :--- |
+| **R1-BUS** | 192.168.20.0 (Bus) | 255.255.255.0 | **10.0.0.2** | `ip route 192.168.20.0 255.255.255.0 10.0.0.2` |
+| **R1-BUS** | 192.168.30.0 (Star) | 255.255.255.0 | **10.0.0.2** | `ip route 192.168.30.0 255.255.255.0 10.0.0.2` |
+| **R2-RING** | 192.168.10.0 (Extended Star) | 255.255.255.0 | **10.0.0.1** | `ip route 192.168.10.0 255.255.255.0 10.0.0.1` |
+
+---
+
+
+#### A. Static Route Verification (Routing Table Output)
+
+The following output from the `show ip route` command confirms that the static routes (marked with **S**) were successfully installed and are active in the routing tables.
+
+**R1-BUS Routing Table Excerpt (Evidence):**
+```bash
+R1-BUS#show ip route
+[Insert R1's connected routes for context]
+S   192.168.20.0/24 [1/0] via 10.0.0.2
+S   192.168.30.0/24 [1/0] via 10.0.0.2
+[Hybrid_Topology](Topologies/Hybrid1.pkt)
