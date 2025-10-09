@@ -133,7 +133,8 @@ The **S** flags confirm the static routes.
 * **Test:** Ping from PC-1A (192.168.10.2, Bus LAN) to PC-3A (192.168.30.2,Extended-Star LAN).
 * **Result:** SUCCESSFUL (0% loss)
 * **Evidence:** [Screenshot](PingTest/ping_test.png)
-*  **Working File:** [Static_route](Topologies/static_route.pkt)
+* **Working File:** [Static_route](Topologies/static_route.pkt)
 
-
+###Topology View
+![Final Topology Map with all connections active](Screenshots/networks.png)
 ---
