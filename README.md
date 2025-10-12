@@ -107,7 +107,7 @@ All required verification tests were successful, confirming end-to-end functiona
 
 ![Web browser displaying the custom 'Ayoba!' welcome page from Server-99](Screenshots/project_server.jpg)
 
-## II. Individual Network Feature Configuration
+## PART II. Individual Network Feature Configuration
 
 **Feature Implemented:** Static Routes to enable communication between different network topologies (Bus, Ring, and Extended-Star).
 
@@ -138,3 +138,10 @@ The **S** flags confirm the static routes.
 ###Topology View
 ![Final Topology Map with all connections active](Screenshots/networks.png)
 ---
+
+
+## PART III. Video Demonstration of parts I & II
+
+### 📽️ Demo Video
+[Watch the demo of PART 1 on Google Drive](https://drive.google.com/file/d/1buRZHe4q5tnzXprSrCpCRNhGq40wxzJq/view?usp=drive_link)
+[Watch the demo of PART 2 on Google Drive](https://drive.google.com/file/d/1jP1Pg0kKvW-ATRYz666h72Nb4sAAjfmz/view?usp=drive_link)
